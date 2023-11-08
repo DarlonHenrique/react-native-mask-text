@@ -9,7 +9,8 @@ This package was created based on other libraries of React Native text mask, wit
 ## Install
 
 ```shell
-yarn add react-native-mask-text
+yarn add @darlonhenrique/react-native-mask-text
+
 ```
 
 ## Custom Mask
@@ -259,4 +260,4 @@ The app's source code is made available under the [MIT license](LICENSE). Some o
 
 ## Contact
 
-Akinn Rosa - [Github](https://github.com/akinncar) - **[akinncar@hotmail.com](mailto:akinncar@hotmail.com)**
+Darlon Henrique - [Github](https://github.com/darlonhenrique) - **[darlonhenrisouza@gmail.com](mailto:darlonhenrisouza@gmail.com)**
