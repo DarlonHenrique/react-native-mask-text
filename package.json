@@ -18,7 +18,10 @@
   "files": [
     "lib/"
   ],
-  "repository": "https://github.com/DarlonHenrique/react-native-mask-text",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarlonHenrique/react-native-mask-text.git"
+  },
   "author": "Darlon Henrique <darlonhenrisouza@gmail.com> (https://github.com/darlonhenrique)",
   "license": "MIT",
   "bugs": {
