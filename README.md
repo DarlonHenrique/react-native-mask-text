@@ -1,4 +1,4 @@
-# react-native-mask-text
+# fork of react-native-mask-text (with modifications)
 
 This is a library to mask Text and Input components in React Native and Expo (Android, iOS and Web).
 
