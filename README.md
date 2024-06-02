@@ -4,13 +4,14 @@ This is a library to mask Text and Input components in React Native and Expo (An
 
 ## Motivation
 
-This package was created based on other libraries of React Native text mask, with the goal of meeting the need of having a package to be used with all React Native contexts (multi-platform concept) and also be maintained currently. You can read [this blog post on Substack](https://akinncar.substack.com/p/why-another-mask-text-package) to see more information about the creation to the current moment of this package.
+That package is a fork of [react-native-mask-text (fork)](https://github.com/Eduardo-lunardi/react-native-mask-text) which is fork of [react-native-mask-text (orignal)](https://github.com/akinncar/react-native-mask-text)
+
+The original package appears to no longer be maintained, this fork is a way to continue the project by adding features and fixes
 
 ## Install
 
 ```shell
 yarn add @darlonhenrique/react-native-mask-text
-
 ```
 
 ## Custom Mask
@@ -28,19 +29,19 @@ Ex: AAA-9999
 Component similar with `<TextInput />` but with custom mask option.
 
 ```jsx
-import { StyleSheet } from "react-native";
-import { MaskedTextInput } from "react-native-mask-text";
+import { StyleSheet } from 'react-native'
+import { MaskedTextInput } from 'react-native-mask-text'
 
 //...
 
-<MaskedTextInput
+;<MaskedTextInput
   mask="AAA-9999"
   onChangeText={(text, rawText) => {
-    console.log(text);
-    console.log(rawText);
+    console.log(text)
+    console.log(rawText)
   }}
   style={styles.input}
-/>;
+/>
 
 //...
 
@@ -50,7 +51,7 @@ const styles = StyleSheet.create({
     margin: 12,
     borderWidth: 1,
   },
-});
+})
 ```
 
 ### Usage MaskedText (custom)
@@ -58,39 +59,39 @@ const styles = StyleSheet.create({
 Component similar with `<Text />` but with custom mask option.
 
 ```jsx
-import { MaskedText } from "react-native-mask-text";
+import { MaskedText } from 'react-native-mask-text'
 
 //...
 
-<MaskedText mask="99/99/9999">30081990</MaskedText>;
+;<MaskedText mask="99/99/9999">30081990</MaskedText>
 ```
 
 ## Date Mask
 
 These options only are used if you use prop `type="date"` in your component:
 
-| Option                 | Type   | Mandatory | Default Value | Description                                 |
-|------------------------|--------|-----------|---------------|---------------------------------------------|
-| dateFormat             | string | No        | yyyy/mm/dd    | Date Format                                 |
+| Option     | Type   | Mandatory | Default Value | Description |
+| ---------- | ------ | --------- | ------------- | ----------- |
+| dateFormat | string | No        | yyyy/mm/dd    | Date Format |
 
 ### Usage MaskedTextInput (date)
 
 Component similar with `<TextInput />` but with date mask option.
 
 ```jsx
-import { StyleSheet } from "react-native";
-import { MaskedTextInput } from "react-native-mask-text";
+import { StyleSheet } from 'react-native'
+import { MaskedTextInput } from 'react-native-mask-text'
 
 //...
 
-<MaskedTextInput
+;<MaskedTextInput
   type="date"
   options={{
     dateFormat: 'YYYY/DD/MM',
   }}
   onChangeText={(text, rawText) => {
-    console.log(text);
-    console.log(rawText);
+    console.log(text)
+    console.log(rawText)
   }}
   style={styles.input}
   keyboardType="numeric"
@@ -104,28 +105,28 @@ const styles = StyleSheet.create({
     margin: 12,
     borderWidth: 1,
   },
-});
+})
 ```
 
 ## Time Mask
 
 These options only are used if you use prop `type="time"` in your component:
 
-| Option                 | Type   | Mandatory | Default Value | Description                                 |
-|------------------------|--------|-----------|---------------|---------------------------------------------|
-| timeFormat             | string | No        | HH:mm:ss      | Time Format                                 |
+| Option     | Type   | Mandatory | Default Value | Description |
+| ---------- | ------ | --------- | ------------- | ----------- |
+| timeFormat | string | No        | HH:mm:ss      | Time Format |
 
 ### Usage MaskedTextInput (time)
 
 Component similar with `<TextInput />` but with time mask option.
 
 ```jsx
-import { StyleSheet } from "react-native";
-import { MaskedTextInput } from "react-native-mask-text";
+import { StyleSheet } from 'react-native'
+import { MaskedTextInput } from 'react-native-mask-text'
 
 //...
 
-<MaskedTextInput
+;<MaskedTextInput
   type="time"
   options={{
     timeFormat: 'HH:mm:ss', // or 'HH:mm'
@@ -146,7 +147,7 @@ const styles = StyleSheet.create({
     margin: 12,
     borderWidth: 1,
   },
-});
+})
 ```
 
 ## Currency Mask
@@ -154,7 +155,7 @@ const styles = StyleSheet.create({
 These options only are used if you use prop `type="currency"` in your component:
 
 | Option                 | Type   | Mandatory | Default Value | Description                                 |
-|------------------------|--------|-----------|---------------|---------------------------------------------|
+| ---------------------- | ------ | --------- | ------------- | ------------------------------------------- |
 | prefix                 | string | No        | null          | String to prepend                           |
 | decimalSeparator       | string | No        | null          | Separation for decimals                     |
 | groupSeparator         | string | No        | null          | Grouping separator of the integer part      |
@@ -170,22 +171,22 @@ These options only are used if you use prop `type="currency"` in your component:
 Component similar with `<TextInput />` but with currency mask option.
 
 ```jsx
-import { StyleSheet } from "react-native";
-import { MaskedTextInput } from "react-native-mask-text";
+import { StyleSheet } from 'react-native'
+import { MaskedTextInput } from 'react-native-mask-text'
 
 //...
 
-<MaskedTextInput
+;<MaskedTextInput
   type="currency"
   options={{
     prefix: '$',
     decimalSeparator: '.',
     groupSeparator: ',',
-    precision: 2
+    precision: 2,
   }}
   onChangeText={(text, rawText) => {
-    console.log(text);
-    console.log(rawText);
+    console.log(text)
+    console.log(rawText)
   }}
   style={styles.input}
   keyboardType="numeric"
@@ -199,7 +200,7 @@ const styles = StyleSheet.create({
     margin: 12,
     borderWidth: 1,
   },
-});
+})
 ```
 
 ### Usage MaskedText (currency)
@@ -207,21 +208,21 @@ const styles = StyleSheet.create({
 Component similar with `<Text />` but with currency mask option.
 
 ```jsx
-import { MaskedText } from "react-native-mask-text";
+import { MaskedText } from 'react-native-mask-text'
 
 //...
 
-<MaskedText
+;<MaskedText
   type="currency"
   options={{
     prefix: '$',
     decimalSeparator: '.',
     groupSeparator: ',',
-    precision: 2
+    precision: 2,
   }}
 >
   5999
-</MaskedText>;
+</MaskedText>
 ```
 
 ## Usage `mask` function
@@ -229,9 +230,9 @@ import { MaskedText } from "react-native-mask-text";
 Function used to mask text.
 
 ```js
-import { mask } from "react-native-mask-text";
+import { mask } from 'react-native-mask-text'
 
-const code = mask("ABC1234","AAA-9999") // return ABC-1234
+const code = mask('ABC1234', 'AAA-9999') // return ABC-1234
 ```
 
 ## Usage `unMask` function
@@ -239,9 +240,9 @@ const code = mask("ABC1234","AAA-9999") // return ABC-1234
 Function used to remove text mask.
 
 ```js
-import { unMask } from "react-native-mask-text";
+import { unMask } from 'react-native-mask-text'
 
-const code = unMask("ABC-1234") // return ABC1234
+const code = unMask('ABC-1234') // return ABC1234
 ```
 
 ## Example
@@ -261,3 +262,8 @@ The app's source code is made available under the [MIT license](LICENSE). Some o
 ## Contact
 
 Darlon Henrique - [Github](https://github.com/darlonhenrique) - **[darlonhenrisouza@gmail.com](mailto:darlonhenrisouza@gmail.com)**
+
+## tributes
+
+- https://github.com/akinncar (the original creator)
+- https://github.com/Eduardo-lunardi (the fork i used)
